@@ -1,0 +1,64 @@
+
+$couleur-principale: #0074c7
+$couleur-secondaire: #00497c
+$couleur-fond: #f1f8fc
+$couleur-texte: #384050
+$couleur-erreur: #cd2c2e
+$couleur-succes: #82b864
+$police-principale: 'Grafik', sans-serif
+
+
+h2, h3
+  color: $couleur-principale
+  font-family: $police-principale 
+p
+  color: $couleur-texte
+  font-family: $police-principale 
+
+label
+  font-weight: bold
+  display: block
+  margin-bottom: 5px
+  color: $couleur-texte
+  font-family: $police-principale 
+
+input[type="text"],
+textarea
+ 
+  padding: 8px
+  margin-bottom: 15px
+  border: 1px solid $couleur-secondaire
+  border-radius: 4px
+  color: $couleur-texte
+
+textarea
+  height: 100px
+
+button
+  background-color: $couleur-principale
+  color: #fff
+  border: none
+  padding: 10px 20px
+  border-radius: 4px
+  cursor: pointer
+  font-family: $police-principale 
+
+button:hover
+  background-color: $couleur-secondaire
+
+
+.message
+  margin-top: 10px
+  padding: 10px
+  border-radius: 4px
+  font-family: $police-principale 
+
+.error-message
+  background-color: $couleur-fond
+  color: $couleur-erreur
+  font-family: $police-principale 
+
+.success-message
+  background-color: $couleur-fond
+  color: $couleur-succes
+  font-family: $police-principale 

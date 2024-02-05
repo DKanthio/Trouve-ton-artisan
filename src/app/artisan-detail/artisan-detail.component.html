@@ -1,0 +1,32 @@
+<div *ngIf="artisan" class="text-light py-4">
+    <h2>Les détails sur l'artisan</h2>
+    <div>
+        <h3>{{ artisan.name }}</h3>
+        <p>Note : {{ artisan.note }}/5<ng-container *ngFor="let star of generateStarsArray(artisan.note)">
+            <ng-container *ngIf="star === 1">&#9733;</ng-container> 
+            <ng-container *ngIf="star === 0.5">&#9734;&#xFE0E;&#9733;</ng-container> 
+            <ng-container *ngIf="star === 0">&#9734;&#xFE0E;</ng-container> 
+        </ng-container></p>
+        <p><strong>Spécialité:</strong> {{ artisan.specialty }}</p>
+        <p><strong>Localisation:</strong> {{ artisan.location }}</p>
+        <p><strong>A propos:</strong> {{ artisan.about }}</p>
+        <h3>Contactez l'artisan</h3>
+        <form (submit)="sendEmail($event)">
+          <label for="name">Votre nom :</label>
+          <input type="text" id="name" name="name" required>
+          <label for="subject">Objet:</label>
+          <input type="text" name="subject" required><br>
+          <label for="message">Message:</label><br>
+          <textarea name="message" rows="4" cols="50" required></textarea><br>
+          <button type="submit">Envoyer</button>
+        </form>
+        <div *ngIf="emailSent && successMessage" class="alert alert-success">
+            {{ successMessage }}
+        </div>
+        
+        <p *ngIf="artisan.website"><strong>Site web:</strong> <a href="{{ artisan.website }}" target="_blank">{{ artisan.website }}</a></p>
+    </div>
+</div>
+<div *ngIf="!artisan">
+    <p>Artisan non trouvé.</p>
+</div>

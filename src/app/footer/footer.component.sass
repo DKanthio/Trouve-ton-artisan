@@ -1,0 +1,36 @@
+
+$background-color: #384050
+$link-color: #f1f8fc 
+$text-color: #f1f8fc
+
+
+@mixin font-stack 
+  font-family: 'Grafik', sans-serif
+
+
+footer
+  background-color: $background-color 
+  color: $text-color
+  @include font-stack
+
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px
+
+
+.footer-menu
+  a
+    text-decoration: none
+    color: $link-color
+    display: block 
+    margin-bottom: 10px 
+
+    &:hover
+      text-decoration: underline
+
+
+.contact-info
+  p
+    margin: 0
+    line-height: 1.5

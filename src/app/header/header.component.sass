@@ -1,0 +1,39 @@
+$background-color: #384050
+$link-color: #f1f8fc
+$hover-color: #82b864
+$text-color: #f1f8fc
+$accent-color: #0074c7
+$highlight-color: #82b864
+
+@mixin font-stack
+  font-family: 'Grafik', sans-serif
+
+header
+  background-color: $background-color
+  color: $text-color
+  @include font-stack
+  
+  .navbar-toggler
+    border: none
+   
+   
+
+    
+            
+ 
+
+ 
+  .navbar-nav
+   display: flex
+   justify-content: flex-end
+   align-items: center
+   margin-left: auto
+  .nav-link
+    text-decoration: none
+    color: $link-color
+    margin-left: 20px 
+
+    &:hover
+        color: $hover-color
+
+ 

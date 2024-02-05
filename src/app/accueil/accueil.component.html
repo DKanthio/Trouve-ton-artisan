@@ -1,0 +1,32 @@
+<div class="content">
+  <section class="find-artisan">
+      <h1>Comment trouver mon artisan ?</h1>
+      <ol>
+          <li>Choisir la catégorie d'artisanat dans le menu.</li>
+          <li>Choisir un artisan.</li>
+          <li>Le contacter via le formulaire de contact.</li>
+          <li>Une réponse sera apportée sous 48h.</li>
+      </ol>
+  </section>
+
+  <section class="top-artisans">
+    <h2>Les trois meilleurs artisans </h2>
+      <div class="row">
+          <div class="col-md-4" *ngFor="let artisan of topArtisans">
+              <div class="card">
+                  <div class="card-body">
+                      <h3 class="card-title">{{ artisan.name }}</h3>
+                      <p>Note : {{ artisan.note }}/5<ng-container *ngFor="let star of generateStarsArray(artisan.note)">
+                        <ng-container *ngIf="star === 1">&#9733;</ng-container> 
+                        <ng-container *ngIf="star === 0.5">&#9734;&#xFE0E;&#9733;</ng-container> 
+                        <ng-container *ngIf="star === 0">&#9734;&#xFE0E;</ng-container> 
+                    </ng-container></p>
+                    
+                      <p>Spécialité : {{ artisan.specialty }}</p>
+                      <p>Localisation : {{ artisan.location }}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</div>

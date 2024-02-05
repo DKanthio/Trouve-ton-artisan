@@ -1,0 +1,20 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" routerLink="/">
+                <img src="../../assets/images/logo.png" alt=""/>
+            </a>
+            <button class="navbar-toggler white-tex" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMenu()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" [class.show]="isMenuOpen">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link" routerLink="/bâtiment" routerLinkActive="active" (click)="toggleMenu()">Bâtiment</a>
+                    <a class="nav-link" routerLink="/services" routerLinkActive="active" (click)="toggleMenu()">Services</a>
+                    <a class="nav-link" routerLink="/fabrication" routerLinkActive="active" (click)="toggleMenu()">Fabrication</a>
+                    <a class="nav-link" routerLink="/alimentation" routerLinkActive="active" (click)="toggleMenu()">Alimentation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

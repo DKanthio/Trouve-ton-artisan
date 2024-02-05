@@ -1,0 +1,26 @@
+<div *ngIf="artisans.length > 0" class="container">
+  <h2>Artisans dans la catégorie bâtiment</h2>
+
+  <div class="row">
+      <div *ngFor="let artisan of artisans" class="col-md-6">
+          <div class="artisan-fiche card mb-3">
+              <a routerLink="/artisan/{{artisan.id}}" class="artisan-link card-body"> 
+                  <h3 class="card-title">{{ artisan.name }}</h3>
+                  <p class="card-text">Note : {{ artisan.note }}/5
+                      <ng-container *ngFor="let star of generateStarsArray(artisan.note)">
+                          <ng-container *ngIf="star === 1">&#9733;</ng-container> 
+                          <ng-container *ngIf="star === 0.5">&#9734;&#xFE0E;&#9733;</ng-container> 
+                          <ng-container *ngIf="star === 0">&#9734;&#xFE0E;</ng-container> 
+                      </ng-container>
+                  </p>
+                  <p class="card-text"><strong>Spécialité:</strong> {{ artisan.specialty }}</p>
+                  <p class="card-text"><strong>Localisation:</strong> {{ artisan.location }}</p>
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div *ngIf="artisans.length === 0" class="container">
+  <p>Aucun artisan trouvé dans la catégorie Bâtiment.</p>
+</div>
