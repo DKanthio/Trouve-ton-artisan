@@ -6,7 +6,7 @@ const maildev = new MailDev({
   disableWeb: true // Désactive l'interface Web MailDev
 });
 
-// Écoute du serveur MailDev sur le port 1080
+// Écoute le serveur MailDev sur le port 1080
 maildev.listen(function(err) {
   if (err) {
     console.error('Erreur lors de l\'écoute de MailDev:', err);
@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-// Autres routes et configurations de votre application Express...
+// Autres routes et configurations de mon application Express...
 
 const port = 1025;
 app.listen(port, () => {
