@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-## Do npm run server to start it
+## Do npm run serveur to start it
 ## To start maildev, type maildev in your command line
 ## npm run api to start the api too
 
